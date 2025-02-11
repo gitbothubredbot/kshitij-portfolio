@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   
-    // Contact form submission (demo only)
+    // Contact form submission (demo only) change later
     const contactForm = document.getElementById("contact-form");
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
