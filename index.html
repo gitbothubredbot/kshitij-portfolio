@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kshitij Prasad - Robotics Developer</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- AOS Animation CSS (via CDN) -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header id="home">
+    <nav class="navbar">
+      <div class="logo">Kshitij Prasad</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="hero" data-aos="fade-up">
+      <h1>Hi, I'm Kshitij</h1>
+      <p>
+        Robotics Development | Autonomous Vehicles | Avionics &amp; More
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate robotics developer focused on solving big-impact
+          problems. With hands-on experience in Robotics, Autonomous Vehicles,
+          ROS2, and more, I’m riding the wave of innovation in the autonomous
+          industry. Currently pursuing my Bachelor's in Autonomous Vehicle
+          Engineering at Technische Hochschule Ingolstadt (Graduating in 2026),
+          I’ve worked on various projects that bridge industry and academia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <!-- Project 1 Thumbnail -->
+          <div class="project-card" data-project-id="project1">
+            <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
+              <img src="media/schanzer_logo.png" alt="Schanzer Racing Logo" />
+            </div>
+            <h3>Schanzer Racing Ingolstadt</h3>
+          </div>
+          <!-- Project 2 Thumbnail -->
+          <div class="project-card" data-project-id="project2">
+            <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
+              <img src="media/pixelpark_logo.png" alt="Pixel Park Logo" />
+            </div>
+            <h3>Pixel Park</h3>
+          </div>
+          <!-- Add more project cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Project 1 -->
+    <div class="modal" id="modal-project1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Schanzer Racing Ingolstadt</h2>
+        <div class="media">
+          <video controls width="100%">
+            <source src="media/schanzer_racing.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p>
+          In this project I worked on differential drive robotics, integrated
+          LiDAR solutions, and managed budgeting for technical components.
+        </p>
+        <a href="https://github.com/yourusername/schanzer_racing_project" target="_blank" class="btn">View Code</a>
+      </div>
+    </div>
+
+    <!-- Modal for Project 2 -->
+    <div class="modal" id="modal-project2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Pixel Park</h2>
+        <div class="media">
+          <video controls width="100%">
+            <source src="media/pixel_park.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p>
+          This project involved developing a LiDAR-based parking detection
+          system to identify available spots, reduce search time, and cut CO₂ emissions.
+        </p>
+        <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn">View Code</a>
+      </div>
+    </div>
+
+    <!-- CV Section -->
+    <section id="cv" data-aos="fade-up">
+      <div class="container">
+        <h2>Curriculum Vitae</h2>
+        <div class="cv-content">
+          <h3>Kshitij Prasad</h3>
+          <p><strong>Role:</strong> Robotics Development</p>
+          <p><strong>Age:</strong> 24</p>
+          <p>
+            <strong>Passions:</strong> Robotics, Avionics, and Automobiles
+          </p>
+          <p>
+            <strong>Career Goal:</strong> Solve big-impact problems and be part
+            of the autonomous industry's wave.
+          </p>
+          <p><strong>Graduation:</strong> 2026</p>
+
+          <h4>Languages</h4>
+          <p>English (Native), German (B2-C1)</p>
+
+          <h4>Tools and Frameworks</h4>
+          <p>
+            Python, C++, MATLAB, Unity, ROS2, SLAM, Path Planning, Computer
+            Vision, Sensor Fusion, Git, Linux, Debugging, Algorithm Optimization,
+            Analytical Skills, Team Collaboration
+          </p>
+
+          <h4>Work Experience</h4>
+          <ul>
+            <li>
+              Developed critical components for a service giveaway robot using
+              ROS2, Nav2, SLAM, and Gazebo.
+            </li>
+            <li>
+              Integrated Intel Realsense Depth Camera and LiDAR for real-time
+              object detection using YOLO models.
+            </li>
+            <li>
+              Held Intern and Werkstudent roles at AKKODiS, working on autonomous
+              navigation, perception, and custom ROS2 plugins.
+            </li>
+          </ul>
+
+          <h4>Educational History</h4>
+          <p>
+            Pursuing a Bachelor's in Autonomous Vehicle Engineering at
+            Technische Hochschule Ingolstadt.
+          </p>
+
+          <h4>Projects</h4>
+          <ul>
+            <li>
+              Schanzer Racing Ingolstadt – Differential drive robotics and LiDAR
+              solutions.
+            </li>
+            <li>
+              Pixel Park – LiDAR-based parking detection system.
+            </li>
+            <li>
+              Driverless Engineering Hackathon – Autonomous navigation and
+              perception projects.
+            </li>
+            <li>
+              T-Kurs/Studienkolleg – Bridging course for International High
+              School Diploma graduates.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          I'd love to hear from you! Feel free to drop a message or reach out
+          via social media.
+        </p>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <div class="container">
+      <p>&copy; 2025 Kshitij Prasad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- AOS Animation JS (via CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- VanillaTilt for 3D hover effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
