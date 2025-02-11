@@ -227,7 +227,7 @@
     color: #333;
   }
   
-  /* Gallery inside modal for Schanzer Racing */
+  /* Gallery inside modal */
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -247,25 +247,6 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Akkodis Section */
-  .akkodis-logo {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto 1rem auto;
-  }
-  
-  .akkodis-gallery {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .akkodis-gallery img {
-    max-width: 45%;
-    border-radius: 10px;
   }
   
   /* Contact Form */
