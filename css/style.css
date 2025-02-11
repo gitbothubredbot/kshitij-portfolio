@@ -117,9 +117,9 @@
     background: #e65c00;
   }
   
-  /* Main Content margin to avoid fixed header overlap */
+  /* Main Content - reduced gap below header */
   main {
-    margin-top: 100vh;
+    margin-top: 80vh;
   }
   
   /* Sections */
@@ -139,7 +139,44 @@
     margin-bottom: 1.5rem;
   }
   
-  /* Project Cards & Thumbnails */
+  /* Flip Card Styles */
+  .flip-card {
+    perspective: 1000px;
+    margin-bottom: 1rem;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Fixed height to match thumbnail size */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flip-card-front {
+    /* Front side remains as is */
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Project Cards */
   .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -160,24 +197,18 @@
     transform: translateY(-5px);
   }
   
-  .thumbnail {
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    height: 150px; /* Fixed height for consistency */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .project-card h3 {
+    margin-top: 0.5rem;
   }
   
-  .thumbnail img {
+  /* Ensure images inside flip cards are responsive */
+  .flip-card img {
     max-height: 100%;
     width: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.8; /* 80% opaque */
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
   }
-  
-  .project-card:hover .thumbnail img {
+  .flip-card:hover img {
     opacity: 1;
   }
   
@@ -227,7 +258,13 @@
     color: #333;
   }
   
-  /* Gallery inside modal */
+  /* Make sure video is responsive */
+  .modal video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Gallery inside modals */
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -241,12 +278,22 @@
     object-fit: cover;
   }
   
-  /* CV Section */
-  .cv-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* CV Section (Simplified) */
+  .cv-download {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .cv-btn {
+    background: #000;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .cv-btn:hover {
+    background: #333;
   }
   
   /* Contact Form */
@@ -276,15 +323,6 @@
   
   .contact-details p {
     margin: 0.5rem 0;
-  }
-  
-  .cv-download {
-    margin-top: 1rem;
-  }
-  
-  .cv-btn {
-    background: #000;
-    color: #fff;
   }
   
   /* Footer */
@@ -319,6 +357,11 @@
     
     .nav-links.active {
       display: flex;
+    }
+    
+    /* Optionally, reduce the main margin on mobile */
+    main {
+      margin-top: 70vh;
     }
   }
   

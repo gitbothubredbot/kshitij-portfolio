@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize VanillaTilt on all thumbnails for 3D hover effect
+  // Initialize VanillaTilt on all flip-card fronts for 3D hover effect
   if (typeof VanillaTilt !== "undefined") {
-    VanillaTilt.init(document.querySelectorAll(".thumbnail"), {
+    VanillaTilt.init(document.querySelectorAll(".flip-card-front"), {
       max: 15,
       speed: 400,
       glare: true,
