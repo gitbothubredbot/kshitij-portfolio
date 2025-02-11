@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize AOS (Animate on Scroll)
+  // Initialize AOS
   AOS.init({
     duration: 800,
     easing: "slide",
@@ -22,14 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
-      // Close mobile menu if open
       if (navLinks.classList.contains("active")) {
         navLinks.classList.remove("active");
       }
     });
   });
 
-  // Initialize VanillaTilt on all flip-card fronts for 3D hover effect
+  // Initialize VanillaTilt on flip-card fronts
   if (typeof VanillaTilt !== "undefined") {
     VanillaTilt.init(document.querySelectorAll(".flip-card-front"), {
       max: 15,
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const modal = document.getElementById('modal-' + projectId);
       if (modal) {
         modal.style.display = 'flex';
-        // Allow a slight delay so CSS transitions can run
         setTimeout(() => {
           modal.classList.add('show');
         }, 10);
@@ -63,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.classList.remove('show');
         setTimeout(() => {
           modal.style.display = 'none';
-        }, 300); // Wait for transition to finish
+        }, 300);
       }
     });
   });
