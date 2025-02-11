@@ -7,15 +7,9 @@
   <!-- Link to CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- AOS Animation CSS (via CDN) -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Header & Navigation -->
@@ -26,6 +20,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#akkodis">Akkodis</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -66,26 +61,42 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="project-grid">
-          <!-- Project 1 Thumbnail -->
+          <!-- Project 1 Thumbnail: Schanzer Racing -->
           <div class="project-card" data-project-id="project1">
             <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
               <img src="media/schanzer_logo.png" alt="Schanzer Racing Logo" />
             </div>
             <h3>Schanzer Racing Ingolstadt</h3>
           </div>
-          <!-- Project 2 Thumbnail -->
+          <!-- Project 2 Thumbnail: Pixel Park -->
           <div class="project-card" data-project-id="project2">
             <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
               <img src="media/pixelpark_logo.png" alt="Pixel Park Logo" />
             </div>
             <h3>Pixel Park</h3>
           </div>
-          <!-- Add more project cards as needed -->
         </div>
       </div>
     </section>
 
-    <!-- Modal for Project 1 -->
+    <!-- Akkodis Section -->
+    <section id="akkodis" data-aos="fade-up">
+      <div class="container">
+        <h2>Work at Akkodis</h2>
+        <div class="akkodis-header">
+          <img src="media/akkodis_logo.jpg" alt="Akkodis Logo" class="akkodis-logo" />
+        </div>
+        <p>
+          Here’s a glimpse of my work with TurtleBot3 at Akkodis.
+        </p>
+        <div class="akkodis-gallery">
+          <img src="media/akkodis1.gif" alt="Akkodis Work 1">
+          <img src="media/akkodis2.gif" alt="Akkodis Work 2">
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Project 1: Schanzer Racing -->
     <div class="modal" id="modal-project1">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -100,11 +111,18 @@
           In this project I worked on differential drive robotics, integrated
           LiDAR solutions, and managed budgeting for technical components.
         </p>
-        <a href="https://github.com/yourusername/schanzer_racing_project" target="_blank" class="btn">View Code</a>
+        <!-- Additional Gallery for Schanzer Racing -->
+        <div class="gallery">
+          <img src="media/schanzer_racing.jpeg" alt="Schanzer Racing 1">
+          <img src="media/schanzer_racing2.jpeg" alt="Schanzer Racing 2">
+          <img src="media/schanzer_racing3.jpeg" alt="Schanzer Racing 3">
+          <img src="media/schanzer_racing4.jpeg" alt="Schanzer Racing 4">
+        </div>
+        <a href="https://schanzer-racing.de/" target="_blank" class="btn">Visit Schanzer Racing</a>
       </div>
     </div>
 
-    <!-- Modal for Project 2 -->
+    <!-- Modal for Project 2: Pixel Park -->
     <div class="modal" id="modal-project2">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -131,9 +149,7 @@
           <h3>Kshitij Prasad</h3>
           <p><strong>Role:</strong> Robotics Development</p>
           <p><strong>Age:</strong> 24</p>
-          <p>
-            <strong>Passions:</strong> Robotics, Avionics, and Automobiles
-          </p>
+          <p><strong>Passions:</strong> Robotics, Avionics, and Automobiles</p>
           <p>
             <strong>Career Goal:</strong> Solve big-impact problems and be part
             of the autonomous industry's wave.
@@ -199,20 +215,24 @@
       <div class="container">
         <h2>Contact Me</h2>
         <p>
-          I'd love to hear from you! Feel free to drop a message or reach out
-          via social media.
+          I'd love to hear from you! Feel free to drop a message or reach out via social media.
         </p>
         <form id="contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
+        <!-- Contact Details -->
+        <div class="contact-details">
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kshitijp21/" target="_blank">LinkedIn</a></p>
+          <p><strong>Email:</strong> <a href="mailto:kshitijp21@gmail.com">kshitijp21@gmail.com</a></p>
+          <p><strong>Phone:</strong> +4917620072984</p>
+          <!-- CV Download Banner -->
+          <div class="cv-download">
+            <a href="CV.pdf" target="_blank" class="btn cv-btn">Full Resume</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
