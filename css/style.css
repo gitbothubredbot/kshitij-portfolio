@@ -1,363 +1,377 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global Styles */
-  body {
-    font-family: "Montserrat", sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 0;
-  }
-  
-  /* Navigation */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .logo {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Dark Theme */
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ff6600;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+/* Hero Section */
+header {
+  height: 100vh;
+  background: url('../media/hero-new.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 15%; /* shifted further left for a professional look */
+  transform: translate(-15%, -50%);
+  color: #fff;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e65c00;
+}
+
+/* Main Content (reduce gap below header) */
+main {
+  margin-top: 70vh;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Flip Card Styles */
+.flip-card {
+  perspective: 1000px;
+  margin-bottom: 1rem;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #111;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-top: 0.5rem;
+}
+
+/* Images inside flip cards */
+.flip-card img {
+  max-height: 100%;
+  width: auto;
+  transition: opacity 0.3s ease;
+  opacity: 0.85;
+}
+.flip-card:hover img {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(-50px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+/* Make the close button sticky so it’s always visible */
+.modal .close {
+  position: sticky;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Responsive video in modal */
+.modal video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Gallery inside modals */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* CV Section */
+.cv-download {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cv-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cv-btn:hover {
+  background: #333;
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+}
+
+#contact-form button {
+  width: 150px;
+  align-self: flex-start;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact-form button:hover {
+  background: #e65c00;
+}
+
+/* Contact Details */
+.contact-details {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .navbar .nav-links {
-    list-style: none;
-    display: flex;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 5px;
   }
-  
   .navbar .nav-links li {
-    margin-left: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
   }
-  
-  .navbar .nav-links li a {
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .navbar .nav-links li a:hover {
-    color: #ff6600;
-  }
-  
-  /* Mobile Menu Toggle */
   .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+    display: flex;
   }
-  
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 4px 0;
-    transition: all 0.3s;
+  .nav-links.active {
+    display: flex;
   }
-  
-  /* Hero Section */
-  header {
-    height: 100vh;
-    background: url('../media/hero-bg.jpg') no-repeat center center/cover;
-    position: relative;
-  }
-  
-  .hero {
-    position: absolute;
-    top: 50%;
-    left: 15%; /* Shifted to the left */
-    transform: translate(-15%, -50%);
-    color: #fff;
-    text-align: left;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: #ff6600;
-    color: #fff;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .btn:hover {
-    background: #e65c00;
-  }
-  
-  /* Main Content margin (reduced gap below header) */
   main {
-    margin-top: 70vh;
+    margin-top: 60vh;
   }
-  
-  /* Sections */
-  section {
-    padding: 4rem 0;
-  }
-  
-  section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Flip Card Styles */
-  .flip-card {
-    perspective: 1000px;
-    margin-bottom: 1rem;
-  }
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .flip-card-back {
-    transform: rotateY(180deg);
-    background: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  /* Project Cards */
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .project-card {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .project-card h3 {
-    margin-top: 0.5rem;
-  }
-  
-  /* Images inside flip cards */
-  .flip-card img {
-    max-height: 100%;
-    width: auto;
-    transition: opacity 0.3s ease;
-    opacity: 0.8;
-  }
-  .flip-card:hover img {
-    opacity: 1;
-  }
-  
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal.show {
-    display: flex;
-    opacity: 1;
-  }
-  
-  .modal-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    transform: translateY(-50px);
-    transition: transform 0.3s ease;
-  }
-  
-  .modal.show .modal-content {
-    transform: translateY(0);
-  }
-  
-  /* Make the close button sticky so it’s always visible */
-  .modal .close {
-    position: sticky;
-    top: 0;
-    right: 0;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #333;
-    padding: 1rem;
-  }
-  
-  /* Responsive video in modal */
-  .modal video {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Gallery inside modals */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .gallery img {
-    width: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  
-  /* CV Section */
-  .cv-download {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .cv-btn {
-    background: #000;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .cv-btn:hover {
-    background: #333;
-  }
-  
-  /* Contact Form */
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  #contact-form button {
-    width: 150px;
-    align-self: flex-start;
-  }
-  
-  /* Contact Details */
-  .contact-details {
-    margin-top: 2rem;
-    text-align: center;
-  }
-  
-  .contact-details p {
-    margin: 0.5rem 0;
-  }
-  
-  /* Footer */
-  footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .navbar .nav-links {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      background: rgba(0,0,0,0.9);
-      flex-direction: column;
-      width: 200px;
-      border-radius: 5px;
-    }
-    .navbar .nav-links li {
-      margin: 1rem 0;
-      text-align: center;
-    }
-    .menu-toggle {
-      display: flex;
-    }
-    .nav-links.active {
-      display: flex;
-    }
-    main {
-      margin-top: 40vh;
-    }
-  }
-  
+}
