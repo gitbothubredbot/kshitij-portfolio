@@ -88,8 +88,8 @@ header {
 .hero {
   position: absolute;
   top: 50%;
-  left: 40%; /* Moved more toward the middle-right */
-  transform: translate(-40%, -50%);
+  left: 55%; /* Positioned more toward the right but not fully */
+  transform: translate(-55%, -50%);
   color: #fff;
   text-align: left;
 }
@@ -119,7 +119,7 @@ header {
 
 /* Main Content (reduce gap below header) */
 main {
-  margin-top: 60vh;
+  margin-top: 55vh;
 }
 
 /* Sections */
@@ -139,42 +139,7 @@ section p {
   margin-bottom: 1.5rem;
 }
 
-/* Flip Card Styles (remove fixed height so image fills card) */
-.flip-card {
-  perspective: 1000px;
-  margin-bottom: 1rem;
-}
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  /* Remove fixed height for a more natural size */
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 0.5rem;
-}
-.flip-card-back {
-  transform: rotateY(180deg);
-  background: #111;
-  color: #fff;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* Project Cards */
+/* Project Cards (without flip effect) */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -199,16 +164,24 @@ section p {
   margin-top: 0.5rem;
 }
 
-/* Images inside flip cards – use object-fit to cover space */
-.flip-card img {
+/* Thumbnail Styles */
+.thumbnail {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 180px;
+}
+
+.thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease;
-  opacity: 0.85;
+  transition: transform 0.3s ease;
 }
-.flip-card:hover img {
-  opacity: 1;
+
+.project-card:hover .thumbnail img {
+  transform: scale(1.05);
 }
 
 /* Modal Styles */
@@ -270,7 +243,7 @@ section p {
 /* Gallery inside modals */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -278,7 +251,13 @@ section p {
 .gallery img {
   width: 100%;
   border-radius: 5px;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+/* Specific for Akkodis gallery: make images larger */
+.akkodis-gallery img {
+  width: 100%;
+  height: auto;
 }
 
 /* CV Section */
@@ -372,6 +351,6 @@ footer {
     display: flex;
   }
   main {
-    margin-top: 60vh;
+    margin-top: 50vh;
   }
 }

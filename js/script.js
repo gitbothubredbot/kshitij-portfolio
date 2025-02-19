@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize VanillaTilt on flip-card fronts
+  // Initialize VanillaTilt on thumbnail elements
   if (typeof VanillaTilt !== "undefined") {
-    VanillaTilt.init(document.querySelectorAll(".flip-card-front"), {
+    VanillaTilt.init(document.querySelectorAll(".thumbnail"), {
       max: 15,
       speed: 400,
       glare: true,
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Modal functionality
+  // Modal functionality: open modal on project card click
   const projectCards = document.querySelectorAll('.project-card');
   projectCards.forEach(card => {
     card.addEventListener('click', function() {
