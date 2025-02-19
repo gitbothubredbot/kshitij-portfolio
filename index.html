@@ -19,15 +19,14 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#cv">CV</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="menu-toggle">
         <span></span><span></span><span></span>
       </div>
     </nav>
-    <!-- Use your new hero image here (hero-new.jpg) -->
     <div class="hero" data-aos="fade-up">
       <h1>Hi, I'm Kshitij</h1>
       <p>Robotics Development | Autonomous Vehicles</p>
@@ -37,17 +36,27 @@
 
   <!-- Main Content -->
   <main>
-    <!-- About Section -->
+    <!-- About Section (Reworded) -->
     <section id="about" data-aos="fade-up">
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I'm a passionate robotics developer focused on solving big-impact problems. With hands-on experience in Robotics, Autonomous Vehicles, ROS2, and more, I’m riding the wave of innovation in the autonomous industry. Currently pursuing my Bachelor's in Autonomous Vehicle Engineering at Technische Hochschule Ingolstadt (Graduating in 2026), I’ve worked on various projects that bridge industry and academia.
+          Hi, I'm Kshitij – a creative tinkerer and lifelong learner with a deep passion for robotics and technology. I love getting my hands dirty, whether it’s fixing hardware or writing code, to bring innovative ideas to life. I believe robotics is about making life better, and I thrive on turning challenges into opportunities.
         </p>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- CV Section (Simplified, with orange button) -->
+    <section id="cv" data-aos="fade-up">
+      <div class="container">
+        <h2>Curriculum Vitae</h2>
+        <div class="cv-download">
+          <a href="CV.pdf" target="_blank" class="btn cv-btn">Full Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Ordered: Schanzer, Akkodis, Pixhawk, Pixel Park) -->
     <section id="projects" data-aos="fade-up">
       <div class="container">
         <h2>Projects</h2>
@@ -64,19 +73,8 @@
             </div>
             <h3>Schanzer Racing Ingolstadt</h3>
           </div>
-          <!-- Project 2: Pixel Park -->
-          <div class="project-card flip-card" data-project-id="project2">
-            <div class="flip-card-inner">
-              <div class="flip-card-front" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
-                <img src="media/pixelpark_logo.jpg" alt="Pixel Park Logo">
-              </div>
-              <div class="flip-card-back">
-                <img src="media/pixelpark_logo.jpg" alt="Pixel Park Preview">
-              </div>
-            </div>
-            <h3>Pixel Park</h3>
-          </div>
-          <!-- Project 3: Akkodis Work (TurtleBot) -->
+
+          <!-- Project 2: Akkodis - TurtleBot3 Work -->
           <div class="project-card flip-card" data-project-id="akkodis">
             <div class="flip-card-inner">
               <div class="flip-card-front" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
@@ -88,7 +86,8 @@
             </div>
             <h3>Akkodis - TurtleBot3 Work</h3>
           </div>
-          <!-- Project 4: Pixhawk Drone -->
+
+          <!-- Project 3: Pixhawk Drone Project -->
           <div class="project-card flip-card" data-project-id="pixhawk">
             <div class="flip-card-inner">
               <div class="flip-card-front" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
@@ -96,12 +95,25 @@
               </div>
               <div class="flip-card-back">
                 <p>
-                  Picked up a used Pixhawk drone off eBay that was pretty rough around the edges and set out to bring it back to life. I fixed its hardware, updated its firmware, and added extra sensors. Now, it’s an autonomous exploration platform for environmental monitoring, aerial surveys, and search &amp; rescue. <br>
-                  <em>Started December 2024.</em>
+                  I picked up a used Pixhawk drone off eBay that was rough around the edges, fixed its hardware, updated its firmware, and added extra sensors. Now it’s an autonomous exploration platform for environmental monitoring, aerial surveys, and search &amp; rescue.
+                  <br><em>Started December 2024.</em>
                 </p>
               </div>
             </div>
             <h3>Pixhawk Drone Project</h3>
+          </div>
+
+          <!-- Project 4: Pixel Park -->
+          <div class="project-card flip-card" data-project-id="project2">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
+                <img src="media/pixelpark_logo.png" alt="Pixel Park Logo">
+              </div>
+              <div class="flip-card-back">
+                <p>This hackathon project was completed in 24 hours. I developed a LiDAR-based parking detection system to quickly identify available spots and reduce search time.</p>
+              </div>
+            </div>
+            <h3>Pixel Park</h3>
           </div>
         </div>
       </div>
@@ -113,7 +125,6 @@
         <span class="close">&times;</span>
         <h2>Schanzer Racing Ingolstadt</h2>
         <div class="media">
-          <!-- Added a poster so mobile users know there's a video -->
           <video controls width="100%" poster="media/schanzer_racing.jpeg">
             <source src="media/schanzer_racing.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -132,39 +143,12 @@
       </div>
     </div>
 
-    <!-- Modal for Pixel Park -->
-    <div class="modal" id="modal-project2">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Pixel Park</h2>
-        <div class="media">
-          <video controls width="100%" poster="media/pixelpark_logo.jpg">
-            <source src="media/pixel_park.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <p>
-          This project involved developing a LiDAR-based parking detection system to identify available spots, reduce search time, and cut CO₂ emissions.
-        </p>
-        <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn">View Code</a>
-      </div>
-    </div>
-
-    <!-- Modal for Akkodis Work (TurtleBot) -->
+    <!-- Modal for Akkodis Work (TurtleBot3) -->
     <div class="modal" id="modal-akkodis">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Akkodis - TurtleBot3 Work</h2>
-        <!-- Instead of showing the logo, show a video demo -->
-        <div class="media">
-          <video controls width="100%" poster="media/turtlebot_demo.jpg">
-            <source src="media/turtlebot_demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <p>
-          Here’s a glimpse of my work with TurtleBot3 at Akkodis. The project involved integrating sensors, programming autonomous navigation, and optimizing real-time performance.
-        </p>
+        <!-- Removed the logo video so that the GIF gallery is more prominent -->
         <div class="gallery">
           <img src="media/akkodis1.gif" alt="Akkodis Work 1">
           <img src="media/akkodis2.gif" alt="Akkodis Work 2">
@@ -172,27 +156,37 @@
       </div>
     </div>
 
-    <!-- Modal for Pixhawk Drone -->
+    <!-- Modal for Pixhawk Drone Project -->
     <div class="modal" id="modal-pixhawk">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Pixhawk Drone Project</h2>
-        <p>
-          I picked up a used Pixhawk drone off eBay that was pretty rough around the edges and set out to bring it back to life. I fixed up its hardware and updated its firmware – even adding extra sensors along the way. Now, I’m turning it into an autonomous exploration platform for real-world applications like environmental monitoring, aerial surveys, and search &amp; rescue. This hands-on adventure sharpened my troubleshooting skills and ignited my passion for innovative tech solutions.
-          <br><em>Started December 2024.</em>
-        </p>
+        <div class="media">
+          <video controls width="100%" poster="media/pixhawk_drone.jpg">
+            <source src="media/pixhawk_drone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
 
-    <!-- CV Section (Simplified) -->
-    <section id="cv" data-aos="fade-up">
-      <div class="container">
-        <h2>Curriculum Vitae</h2>
-        <div class="cv-download">
-          <a href="CV.pdf" target="_blank" class="btn cv-btn">Full Resume</a>
+    <!-- Modal for Pixel Park -->
+    <div class="modal" id="modal-project2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Pixel Park</h2>
+        <div class="media">
+          <video controls width="100%" poster="media/pixelpark_logo.png">
+            <source src="media/pixel_park.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
+        <p>
+          This hackathon project was completed in 24 hours, during which I developed a LiDAR-based parking detection system to swiftly identify available parking spots.
+        </p>
+        <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn">View Code</a>
       </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" data-aos="fade-up">
