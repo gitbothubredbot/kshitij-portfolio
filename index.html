@@ -41,7 +41,7 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I'm currently a bachelor’s student in Autonomous Vehicle Engineering at TH Ingolstadt. I’m on a journey to learn everything I can about robotics and self-driving cars—from tinkering with hardware to coding my own control systems. Every project is a real-world lesson, and I’m excited to keep pushing my skills further.
+          I'm currently a bachelor’s student in Autonomous Vehicle Engineering at TH Ingolstadt. I’m on a journey to learn the ins and outs of robotics and self-driving cars—tinkering with hardware, writing code, and solving real-world challenges. Every project is a lesson, and I'm eager to improve every day.
         </p>
       </div>
     </section>
@@ -56,7 +56,7 @@
       </div>
     </section>
 
-    <!-- Projects Section (Order: Schanzer Racing, Akkodis, Pixhawk, Pixel Park) -->
+    <!-- Projects Section -->
     <section id="projects" data-aos="fade-up">
       <div class="container">
         <h2>Projects</h2>
@@ -128,10 +128,10 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <!-- Enlarged GIF gallery for Akkodis -->
+        <!-- Enlarged and clickable GIF gallery for Akkodis -->
         <div class="gallery">
-          <img src="media/akkodis1.gif" alt="Akkodis Work 1">
-          <img src="media/akkodis2.gif" alt="Akkodis Work 2">
+          <img src="media/akkodis1.gif" alt="Akkodis Work 1" class="lightbox-img">
+          <img src="media/akkodis2.gif" alt="Akkodis Work 2" class="lightbox-img">
         </div>
       </div>
     </div>
@@ -147,6 +147,9 @@
             Your browser does not support the video tag.
           </video>
         </div>
+        <p>
+          This project revives a used Pixhawk drone, transforming it into an autonomous exploration platform for environmental monitoring, aerial surveys, and search &amp; rescue. Started December 2024.
+        </p>
       </div>
     </div>
 
@@ -168,14 +171,22 @@
       </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Lightbox Modal for Akkodis GIFs -->
+    <div class="modal" id="modal-lightbox">
+      <div class="modal-content lightbox-content">
+        <span class="close lightbox-close">&times;</span>
+        <img src="" alt="Lightbox Image" id="lightbox-img">
+      </div>
+    </div>
+
+    <!-- Contact Section with mailto form -->
     <section id="contact" data-aos="fade-up">
       <div class="container">
         <h2>Contact Me</h2>
         <p>
-          I'd love to hear from you! Feel free to drop a message or reach out via social media.
+          I'd love to hear from you! Please drop a message below.
         </p>
-        <form id="contact-form">
+        <form id="contact-form" action="mailto:kshitijp21@gmail.com" method="post" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>

@@ -53,6 +53,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Lightbox functionality for Akkodis GIFs
+  const lightboxModal = document.getElementById('modal-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxImages = document.querySelectorAll('.lightbox-img');
+  lightboxImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      lightboxImg.src = this.src;
+      lightboxModal.style.display = 'flex';
+      setTimeout(() => {
+        lightboxModal.classList.add('show');
+      }, 10);
+    });
+  });
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', function(e) {
+      lightboxModal.classList.remove('show');
+      setTimeout(() => {
+        lightboxModal.style.display = 'none';
+      }, 300);
+    });
+  }
+  // Close lightbox if clicked outside the image
+  lightboxModal.addEventListener('click', function(e) {
+    if (e.target === lightboxModal) {
+      lightboxModal.classList.remove('show');
+      setTimeout(() => {
+        lightboxModal.style.display = 'none';
+      }, 300);
+    }
+  });
+
   // Close modals when clicking the close button or outside the modal content
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => {
@@ -66,11 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Contact form submission (demo only)
+  // Contact form submission – using mailto form action, so browser handles sending
   const contactForm = document.getElementById("contact-form");
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Thank you for your message!");
-    contactForm.reset();
+    // Let the mailto action open the user's email client.
   });
 });
