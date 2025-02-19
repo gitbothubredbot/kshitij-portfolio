@@ -88,7 +88,7 @@ header {
 .hero {
   position: absolute;
   top: 50%;
-  left: 55%; /* Positioned more toward the right but not fully */
+  left: 55%; /* adjust so text appears on right side of left image */
   transform: translate(-55%, -50%);
   color: #fff;
   text-align: left;
@@ -101,7 +101,7 @@ header {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* reduced bottom margin */
 }
 
 .btn {
@@ -117,39 +117,39 @@ header {
   background: #e65c00;
 }
 
-/* Main Content (reduce gap below header) */
+/* Main Content - reduce gap below header */
 main {
-  margin-top: 55vh;
+  margin-top: 50vh;
 }
 
 /* Sections */
 section {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
 }
 
 section h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   font-size: 2.5rem;
   color: #fff;
 }
 
 section p {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
-/* Project Cards (without flip effect) */
+/* Project Cards - fixed thumbnail size */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .project-card {
   background: #111;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
@@ -157,11 +157,12 @@ section p {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .project-card h3 {
   margin-top: 0.5rem;
+  font-size: 1.1rem;
 }
 
 /* Thumbnail Styles */
@@ -170,7 +171,7 @@ section p {
   border-radius: 10px;
   margin-bottom: 0.5rem;
   width: 100%;
-  height: 180px;
+  height: 140px; /* fixed height */
 }
 
 .thumbnail img {
@@ -181,7 +182,7 @@ section p {
 }
 
 .project-card:hover .thumbnail img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Modal Styles */
@@ -208,9 +209,9 @@ section p {
 
 .modal-content {
   background: #111;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
@@ -243,7 +244,7 @@ section p {
 /* Gallery inside modals */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -254,7 +255,7 @@ section p {
   object-fit: contain;
 }
 
-/* Specific for Akkodis gallery: make images larger */
+/* Enlarged Akkodis GIFs */
 .akkodis-gallery img {
   width: 100%;
   height: auto;
@@ -351,6 +352,6 @@ footer {
     display: flex;
   }
   main {
-    margin-top: 50vh;
+    margin-top: 45vh;
   }
 }
