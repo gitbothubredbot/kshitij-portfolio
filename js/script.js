@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Modal: Open on project card click
+  // Modal: open on project card click
   const projectCards = document.querySelectorAll(".project-card");
   projectCards.forEach(card => {
     card.addEventListener("click", () => {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close modals
+  // Close modals on click outside or 'x'
   const modals = document.querySelectorAll(".modal");
   modals.forEach(modal => {
     modal.addEventListener("click", e => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Lightbox for Akkodis GIF
+  // Lightbox for any "lightbox-img"
   const lightboxModal = document.getElementById("modal-lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxClose = document.querySelector(".lightbox-close");
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Typewriter effect in hero
+  // Typewriter effect
   const typewriterElement = document.getElementById("typewriter");
   const textArray = [
     "Hi, I'm Kshitij",
@@ -136,29 +136,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Start typewriter effect after 1s
   setTimeout(type, 1000);
-
-  // Shrinking navbar on scroll
-  window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 100) {
-      navbar.classList.add("shrink");
-    } else {
-      navbar.classList.remove("shrink");
-    }
-  });
-
-  // Back to top button
-  const backToTop = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      backToTop.style.display = "block";
-    } else {
-      backToTop.style.display = "none";
-    }
-  });
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
 });

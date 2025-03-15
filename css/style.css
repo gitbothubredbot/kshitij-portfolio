@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Global Dark Theme & Setup */
+/* Global Dark Theme */
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
@@ -54,7 +54,6 @@ a {
 .navbar .nav-links li {
   margin-left: 1.5rem;
 }
-
 .navbar .nav-links li a {
   color: #fff;
   font-weight: 500;
@@ -66,7 +65,6 @@ a {
   border-bottom: 1px solid #ff6600;
 }
 
-/* Hamburger menu toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -90,9 +88,9 @@ header {
 }
 
 .hero {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -103,28 +101,23 @@ header {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.5);
   z-index: 1;
 }
 
-/* Floating shapes in hero */
+/* Floating shapes */
 .floating-shapes {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: 1;
   overflow: hidden;
 }
 .floating-shapes .shape {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 40px; height: 40px;
   background: #ff6600;
   opacity: 0.3;
   border-radius: 50%;
@@ -158,15 +151,9 @@ header {
   animation-delay: 8s;
 }
 @keyframes floatShape {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-200px) scale(1.3);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+  0%   { transform: translateY(0) scale(1);}
+  50%  { transform: translateY(-200px) scale(1.3);}
+  100% { transform: translateY(0) scale(1);}
 }
 
 .hero h1 {
@@ -188,17 +175,17 @@ header {
   z-index: 2;
 }
 
-/* Animate typed text */
+/* Typed text effect */
 #typewriter {
   font-size: 3rem;
   color: #fff;
   margin-bottom: 1rem;
 }
 
-/* Fancy button with 3D pop + ripple effect */
+/* Fancy (gradient) button simplified to a bright background with ripple */
 .fancy-btn {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   background: #ff6600;
   color: #fff;
   padding: 0.8rem 1.5rem;
@@ -206,32 +193,25 @@ header {
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
-  transform: perspective(600px) translateZ(0);
   transition: transform 0.3s;
 }
 .fancy-btn:hover {
-  transform: perspective(600px) translateZ(20px) scale(1.05);
+  transform: translateY(-3px) scale(1.02);
 }
 .fancy-btn:active::after {
   content: "";
   position: absolute;
-  width: 1000px;
-  height: 1000px;
-  top: 50%;
-  left: 50%;
+  width: 800px; height: 800px;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255,255,255,0.4);
   animation: ripple 0.6s ease-out;
   pointer-events: none;
 }
 @keyframes ripple {
-  0% {
-    width: 0; height: 0; opacity: 0.7;
-  }
-  100% {
-    width: 1000px; height: 1000px; opacity: 0;
-  }
+  0%   { width: 0; height: 0; opacity: 0.8; }
+  100% { width: 800px; height: 800px; opacity: 0; }
 }
 
 /* Wave Divider */
@@ -248,12 +228,12 @@ header {
   background: #000;
 }
 
-/* Main content below hero */
+/* main content below hero */
 main {
   margin-top: 100vh;
 }
 
-/* Projects */
+/* project grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -261,17 +241,17 @@ main {
   margin-top: 1rem;
 }
 
+/* Project cards with neon on hover */
 .project-card {
   background: #111;
   padding: 0.8rem;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
   transform: scale(1.03);
-  /* Neon glow effect */
   box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
 }
 .project-card h3 {
@@ -279,7 +259,7 @@ main {
   font-size: 1.1rem;
 }
 
-/* Thumbnail Styles */
+/* Thumbnails with tilt */
 .thumbnail {
   overflow: hidden;
   border-radius: 10px;
@@ -302,14 +282,12 @@ main {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
   overflow-y: auto;
   background-color: rgba(0,0,0,0.9);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
   align-items: center;
   justify-content: center;
 }
@@ -321,13 +299,11 @@ main {
   background: #111;
   padding: 1.5rem;
   border-radius: 10px;
-  width: 90%;
-  max-width: 800px;
-  max-height: 90vh;
+  width: 90%; max-width: 800px; max-height: 90vh;
   overflow-y: auto;
   position: relative;
   transform: translateY(-50px);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 .modal.show .modal-content {
   transform: translateY(0);
@@ -341,14 +317,9 @@ main {
   color: #fff;
   padding: 1rem;
 }
-
-/* Video inside modals */
 .modal video {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; height: auto;
 }
-
-/* Gallery inside modals */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -362,19 +333,17 @@ main {
   cursor: pointer;
 }
 
-/* Lightbox for Akkodis GIF */
+/* Lightbox modal */
 #modal-lightbox {
   display: none;
   position: fixed;
   z-index: 3000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
   overflow-y: auto;
   background-color: rgba(0,0,0,0.95);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
   align-items: center;
   justify-content: center;
 }
@@ -386,18 +355,15 @@ main {
   position: relative;
   max-width: 90%;
   background: transparent;
-  padding: 0;
-  border: none;
+  padding: 0; border: none;
 }
 #lightbox-img {
-  width: 100%;
-  height: auto;
+  width: 100%; height: auto;
   display: block;
 }
 .lightbox-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0; right: 0;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
@@ -426,22 +392,29 @@ main {
   transform: scale(1.02);
 }
 #contact-form button {
-  width: 150px;
-  border: none;
-  padding: 0.8rem;
+  position: relative;
+  background: #ff6600;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
   overflow: hidden;
-  position: relative;
+  transition: transform 0.3s;
 }
-
-/* Contact Details */
-.contact-details {
-  margin-top: 2rem;
-  text-align: center;
+#contact-form button:hover {
+  transform: scale(1.05);
 }
-.contact-details p {
-  margin: 0.5rem 0;
+#contact-form button:active::after {
+  content: "";
+  position: absolute;
+  width: 600px; height: 600px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
 }
 
 /* Footer */
@@ -452,39 +425,12 @@ footer {
   padding: 1.5rem 0;
 }
 
-/* Back to Top Button */
-#backToTop {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #ff6600;
-  color: #fff;
-  padding: 0.7rem 1rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: none;
-  z-index: 2001;
-  transition: transform 0.3s;
-}
-#backToTop:hover {
-  transform: scale(1.1);
-}
-
-/* Keyframe for wave divider is just an SVG path, no extra needed. */
-
-/* Scroll effect for navbar height? */
-.navbar.shrink {
-  padding: 0.5rem 2rem;
-}
-
-/* Responsive for smaller screens */
+/* Media queries for mobile */
 @media (max-width: 768px) {
   .navbar .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
-    right: 20px;
+    top: 70px; right: 20px;
     background: #111;
     flex-direction: column;
     width: 200px;
