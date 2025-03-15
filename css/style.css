@@ -19,7 +19,6 @@ a {
   color: inherit;
 }
 
-/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -129,33 +128,39 @@ header {
   z-index: 2;
 }
 
-/* Animate the typed text (typewriter effect) */
+/* Animate typed text */
 #typewriter {
   font-size: 3rem;
   color: #fff;
   margin-bottom: 1rem;
 }
 
-/* gradient button style */
+/* Gradient button style */
 .gradient-btn {
   background: linear-gradient(45deg, #ff6600, #ff9900);
   background-size: 400% 400%;
   animation: gradientAnimation 5s ease infinite;
   border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .gradient-btn:hover {
-  animation-play-state: paused; /* so it looks like it changes color on hover */
+  animation-play-state: paused;
+  transform: scale(1.03);
 }
 
-/* Keyframes for moving gradient */
+/* gradient keyframes */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Main Content below hero */
+/* Main content below hero */
 main {
   margin-top: 100vh;
 }
@@ -196,7 +201,8 @@ section p {
 
 .project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(255, 100, 0, 0.6);
+  /* Neon glow effect */
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
 }
 
 .project-card h3 {
@@ -204,7 +210,7 @@ section p {
   font-size: 1.1rem;
 }
 
-/* Thumbnail */
+/* Thumbnail Styles */
 .thumbnail {
   overflow: hidden;
   border-radius: 10px;
@@ -293,7 +299,7 @@ section p {
   cursor: pointer;
 }
 
-/* Lightbox for Akkodis GIFs */
+/* Lightbox for Akkodis GIF */
 #modal-lightbox {
   display: none;
   position: fixed;
@@ -379,7 +385,7 @@ footer {
   padding: 1.5rem 0;
 }
 
-/* Mobile/Responsive */
+/* Responsive / Mobile */
 @media (max-width: 768px) {
   .navbar .nav-links {
     display: none;

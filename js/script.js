@@ -84,12 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  lightboxClose.addEventListener("click", () => {
-    lightboxModal.classList.remove("show");
-    setTimeout(() => {
-      lightboxModal.style.display = "none";
-    }, 300);
-  });
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", () => {
+      lightboxModal.classList.remove("show");
+      setTimeout(() => {
+        lightboxModal.style.display = "none";
+      }, 300);
+    });
+  }
 
   lightboxModal.addEventListener("click", e => {
     if (e.target === lightboxModal) {
