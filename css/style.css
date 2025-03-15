@@ -136,6 +136,25 @@ header {
   margin-bottom: 1rem;
 }
 
+/* gradient button style */
+.gradient-btn {
+  background: linear-gradient(45deg, #ff6600, #ff9900);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  border: none;
+}
+
+.gradient-btn:hover {
+  animation-play-state: paused; /* so it looks like it changes color on hover */
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Main Content below hero */
 main {
   margin-top: 100vh;
@@ -158,25 +177,7 @@ section p {
   margin-bottom: 1.2rem;
 }
 
-/* CV Section */
-.cv-download {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.cv-btn {
-  background: #ff6600;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.cv-btn:hover {
-  background: #e65c00;
-}
-
-/* Projects */
+/* Project Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -190,11 +191,12 @@ section p {
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 100, 0, 0.6);
 }
 
 .project-card h3 {
@@ -352,8 +354,6 @@ section p {
 #contact-form button {
   width: 150px;
   align-self: flex-start;
-  background: #ff6600;
-  color: #fff;
   border: none;
   padding: 0.8rem;
   border-radius: 5px;
@@ -361,10 +361,7 @@ section p {
   transition: background 0.3s;
 }
 
-#contact-form button:hover {
-  background: #e65c00;
-}
-
+/* Contact Details */
 .contact-details {
   margin-top: 2rem;
   text-align: center;
@@ -382,7 +379,7 @@ footer {
   padding: 1.5rem 0;
 }
 
-/* Responsive for smaller screens */
+/* Mobile/Responsive */
 @media (max-width: 768px) {
   .navbar .nav-links {
     display: none;

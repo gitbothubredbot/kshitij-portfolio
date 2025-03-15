@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Lightbox for Akkodis GIFs
+  // Lightbox for Akkodis GIF
   const lightboxModal = document.getElementById("modal-lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxClose = document.querySelector(".lightbox-close");
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const typewriterElement = document.getElementById("typewriter");
   const textArray = [
     "Hi, I'm Kshitij",
-    "Exploring Robotics and Autonomous Tech, one Project at a time"
+    "Exploring Robotics and Autonomous Tech, One Project at a Time."
   ];
   let arrayIndex = 0;
   let charIndex = 0;
@@ -137,12 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Start typewriter effect
+  // Start the typewriter effect after 1s
   setTimeout(type, 1000);
-
-  // Contact form submission – mailto form action
-  const contactForm = document.getElementById("contact-form");
-  contactForm.addEventListener("submit", function(e) {
-    // Let the mailto action open the user's email client
-  });
 });
