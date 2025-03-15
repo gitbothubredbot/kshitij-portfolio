@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const typewriterElement = document.getElementById("typewriter");
   const textArray = [
     "Hi, I'm Kshitij",
-    "Building the Future of Mobility"
+    "Exploring Robotics and Autonomous Tech, one Project at a time"
   ];
   let arrayIndex = 0;
   let charIndex = 0;
