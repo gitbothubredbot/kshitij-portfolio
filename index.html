@@ -2,35 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kshitij Prasad - Robotics Developer</title>
   <!-- Link to CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- AOS Animation CSS (via CDN) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
+
   <!-- Header & Navigation -->
   <header id="home">
     <nav class="navbar">
       <div class="logo">Kshitij Prasad</div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-aos="fade-down">Home</a></li>
+        <li><a href="#about" data-aos="fade-down">About</a></li>
+        <li><a href="#cv" data-aos="fade-down">CV</a></li>
+        <li><a href="#projects" data-aos="fade-down">Projects</a></li>
+        <li><a href="#contact" data-aos="fade-down">Contact</a></li>
       </ul>
       <div class="menu-toggle">
         <span></span><span></span><span></span>
       </div>
     </nav>
-    <div class="hero" data-aos="fade-up">
-      <h1>Hi, I'm Kshitij</h1>
+    <!-- Parallax Hero with Animated Text -->
+    <div class="hero">
+      <div class="hero-overlay" data-aos="fade-in"></div>
+      <h1 id="typewriter"></h1>
       <p>Robotics Development | Autonomous Vehicles</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <a href="#projects" class="btn" data-aos="zoom-in">View My Work</a>
     </div>
   </header>
 
@@ -41,13 +47,9 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          1.35 million people and 70+ billion hours—Annually, 1.35 million people globally lose their lives while driving, and humans spend over 70 billion hours behind the wheel. These staggering figures underline why I chose to study Autonomous Vehicle Engineering
-
-          Passionate about autonomous vehicles because, at its core, it's about creating a world where every goodbye at the driveway isn't shadowed by worry, and every hello is just a safe drive away. It’s about reclaiming those lost moments stuck in traffic and turning them into stories shared, songs sung, and laughter that fills the car. This is my way of helping us all drive into a future where technology serves not just our needs, but our humanity. 
-        </p>
-        <br>
-        <p>
-          I'm currently a bachelor’s student in Autonomous Vehicle Engineering at TH Ingolstadt. I’m on a journey to learn the ins and outs of robotics and self-driving cars—tinkering with hardware, writing code, and solving real-world challenges. Every project is a lesson, and I'm eager to improve every day.
+          I'm currently a bachelor’s student in Autonomous Vehicle Engineering at TH Ingolstadt. 
+          I’m diving into robotics and self-driving cars—experimenting with hardware, writing code, and solving real-world challenges. 
+          Every project is a new learning curve, and I'm eager to push my skills further each day.
         </p>
       </div>
     </section>
@@ -67,7 +69,13 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="project-grid">
-          
+          <!-- Project 1: Schanzer Racing -->
+          <div class="project-card" data-project-id="project1">
+            <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
+              <img src="media/schanzer_logo.png" alt="Schanzer Racing Logo">
+            </div>
+            <h3>Schanzer Racing Ingolstadt</h3>
+          </div>
           <!-- Project 2: Akkodis - TurtleBot3 Work -->
           <div class="project-card" data-project-id="akkodis">
             <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
@@ -89,13 +97,6 @@
             </div>
             <h3>Pixel Park</h3>
           </div>
-          <!-- Project 1: Schanzer Racing -->
-          <div class="project-card" data-project-id="project1">
-            <div class="thumbnail" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.3">
-              <img src="media/schanzer_logo.png" alt="Schanzer Racing Logo">
-            </div>
-            <h3>Schanzer Racing Ingolstadt</h3>
-          </div>
         </div>
       </div>
     </section>
@@ -112,7 +113,8 @@
           </video>
         </div>
         <p>
-          In this project I worked on differential drive robotics, integrated LiDAR solutions, and managed budgeting for technical components.
+          I worked on differential drive robotics, integrated LiDAR solutions, and managed budgeting for technical components 
+          for the Schanzer Racing Formula Student team.
         </p>
         <div class="gallery">
           <img src="media/schanzer_racing.jpeg" alt="Schanzer Racing 1">
@@ -135,8 +137,17 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <!-- Enlarged and clickable GIF gallery for Akkodis -->
+        <p>
+          This project involved enhancing a TurtleBot3 service robot’s autonomy by integrating 
+          a RealSense D405 depth camera for 3D vision and a YOLO model for real-time object detection. 
+          A distributed ROS 2 system was used: an onboard Raspberry Pi 5 ran the early 2024 “ROS2 Jazzy” release, 
+          while a workstation ran ROS 2 Humble Hawksbill. A custom ZeroMQ bridge transferred camera data and 
+          YOLO inference results between the Pi and PC, and Eclipse Cyclone DDS improved network reliability 
+          and reduced latency. Ultimately, the robot could identify and fetch objects (like a coffee cup) 
+          in a test environment, showcasing robust perception and navigation.
+        </p>
         <div class="gallery">
+          <!-- Lightbox images for Akkodis -->
           <img src="media/akkodis1.gif" alt="Akkodis Work 1" class="lightbox-img">
           <img src="media/akkodis2.gif" alt="Akkodis Work 2" class="lightbox-img">
         </div>
@@ -155,7 +166,11 @@
           </video>
         </div>
         <p>
-          This project revives a used Pixhawk drone, transforming it into an autonomous exploration platform for environmental monitoring, aerial surveys, and search &amp; rescue. Started December 2024.
+          I've been turning a used Pixhawk drone into an autonomous exploration platform for 
+          environmental monitoring, aerial surveys, and search &amp; rescue (since December 2024). 
+          Currently, I'm resolving motor inconsistencies: the front-left motor sometimes experiences 
+          voltage drops, but each fix is a learning experience. Once stable, it will navigate 3D 
+          environments with real-time sensor fusion.
         </p>
       </div>
     </div>
@@ -172,7 +187,8 @@
           </video>
         </div>
         <p>
-          This hackathon project was completed in 24 hours. I developed a LiDAR‑based parking detection system to swiftly identify available spots and reduce search time.
+          Pixel Park was a 24-hour hackathon project. I developed a LiDAR-based parking detection 
+          system to quickly identify open spots and reduce search time. 
         </p>
         <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn">View Code</a>
       </div>
@@ -186,22 +202,27 @@
       </div>
     </div>
 
-    <!-- Contact Section with mailto form -->
+    <!-- Contact Section -->
     <section id="contact" data-aos="fade-up">
       <div class="container">
         <h2>Contact Me</h2>
         <p>
           I'd love to hear from you! Please drop a message below.
         </p>
+        <!-- Mailto form so that it opens the user's email client -->
         <form id="contact-form" action="mailto:kshitijp21@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
         <div class="contact-details">
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kshitijp21/" target="_blank">LinkedIn</a></p>
-          <p><strong>Email:</strong> <a href="mailto:kshitijp21@gmail.com">kshitijp21@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> 
+            <a href="https://www.linkedin.com/in/kshitijp21/" target="_blank">LinkedIn</a>
+          </p>
+          <p><strong>Email:</strong> 
+            <a href="mailto:kshitijp21@gmail.com">kshitijp21@gmail.com</a>
+          </p>
           <p><strong>Phone:</strong> +4917620072984</p>
         </div>
       </div>
