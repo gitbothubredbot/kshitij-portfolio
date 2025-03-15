@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu toggle
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
-
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 10);
     });
   });
-
   if (lightboxClose) {
     lightboxClose.addEventListener("click", () => {
       lightboxModal.classList.remove("show");
@@ -92,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 300);
     });
   }
-
   lightboxModal.addEventListener("click", e => {
     if (e.target === lightboxModal) {
       lightboxModal.classList.remove("show");
@@ -139,6 +136,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Start the typewriter effect after 1s
+  // Start typewriter effect after 1s
   setTimeout(type, 1000);
+
+  // Shrinking navbar on scroll
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 100) {
+      navbar.classList.add("shrink");
+    } else {
+      navbar.classList.remove("shrink");
+    }
+  });
+
+  // Back to top button
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });

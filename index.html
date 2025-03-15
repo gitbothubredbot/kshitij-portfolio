@@ -16,6 +16,9 @@
 </head>
 <body>
 
+  <!-- Back to Top Button -->
+  <div id="backToTop">&#8679;</div>
+
   <!-- Header & Navigation -->
   <header id="home">
     <nav class="navbar">
@@ -31,41 +34,66 @@
         <span></span><span></span><span></span>
       </div>
     </nav>
-    <!-- Parallax Hero with Animated Text -->
+    <!-- Parallax Hero with Animated Text & Floating Shapes -->
     <div class="hero">
       <div class="hero-overlay" data-aos="fade-in"></div>
+      <!-- Floating shapes -->
+      <div class="floating-shapes">
+        <span class="shape"></span>
+        <span class="shape"></span>
+        <span class="shape"></span>
+        <span class="shape"></span>
+        <span class="shape"></span>
+      </div>
       <h1 id="typewriter"></h1>
       <p>Robotics Development | Autonomous Vehicles</p>
-      <a href="#projects" class="btn gradient-btn" data-aos="zoom-in">View My Work</a>
+      <!-- 3D pop + ripple effect button -->
+      <a href="#projects" class="btn fancy-btn" data-aos="zoom-in">View My Work</a>
     </div>
   </header>
+
+  <!-- Wave Divider -->
+  <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,120 C480,0 960,180 1440,60 L1440,240 L0,240 Z"></path>
+  </svg>
 
   <!-- Main Content -->
   <main>
     <!-- About Me Section -->
-    <section id="about" data-aos="fade-up">
+    <section id="about" data-aos="fade-up" class="section-wave">
       <div class="container">
         <h2>About Me</h2>
         <p>
           I'm currently a bachelor’s student in Autonomous Vehicle Engineering at TH Ingolstadt.
-          I’m diving into robotics and self-driving cars—experimenting with hardware, writing code, and solving
-          real-world challenges. Every project is a learning curve, and I'm excited to push my skills further each day.
+          I’m diving into robotics and self-driving cars—experimenting with hardware, writing code,
+          and solving real-world challenges. Every project is a learning curve, and I'm excited
+          to push my skills further each day.
         </p>
       </div>
     </section>
 
+    <!-- Wave Divider -->
+    <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,120 C480,0 960,180 1440,60 L1440,240 L0,240 Z"></path>
+    </svg>
+
     <!-- CV Section -->
-    <section id="cv" data-aos="fade-up">
+    <section id="cv" data-aos="fade-up" class="section-wave">
       <div class="container">
         <h2>Curriculum Vitae</h2>
         <div class="cv-download">
-          <a href="CV.pdf" target="_blank" class="btn gradient-btn">Full Resume</a>
+          <a href="CV.pdf" target="_blank" class="btn fancy-btn">Full Resume</a>
         </div>
       </div>
     </section>
 
+    <!-- Wave Divider -->
+    <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,120 C480,0 960,180 1440,60 L1440,240 L0,240 Z"></path>
+    </svg>
+
     <!-- Projects Section -->
-    <section id="projects" data-aos="fade-up">
+    <section id="projects" data-aos="fade-up" class="section-wave">
       <div class="container">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -101,6 +129,11 @@
       </div>
     </section>
 
+    <!-- Wave Divider -->
+    <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,120 C480,0 960,180 1440,60 L1440,240 L0,240 Z"></path>
+    </svg>
+
     <!-- Modal for Schanzer Racing -->
     <div class="modal" id="modal-project1">
       <div class="modal-content">
@@ -122,7 +155,7 @@
           <img src="media/schanzer_racing3.jpeg" alt="Schanzer Racing 3">
           <img src="media/schanzer_racing4.jpeg" alt="Schanzer Racing 4">
         </div>
-        <a href="https://schanzer-racing.de/" target="_blank" class="btn gradient-btn">Visit Schanzer Racing</a>
+        <a href="https://schanzer-racing.de/" target="_blank" class="btn fancy-btn">Visit Schanzer Racing</a>
       </div>
     </div>
 
@@ -138,7 +171,7 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <!-- SECOND video with no poster for tb3_demo.mp4 -->
+        <!-- SECOND video with no poster -->
         <div class="media" style="margin-top: 1rem;">
           <video controls width="100%">
             <source src="media/tb3_demo.mp4" type="video/mp4">
@@ -154,7 +187,6 @@
           reducing latency. The final system let the robot identify and fetch objects in a test environment.
         </p>
         <div class="gallery">
-          <!-- Only one GIF now (akkodis1.gif) -->
           <img src="media/akkodis1.gif" alt="Akkodis Work 1" class="lightbox-img">
         </div>
       </div>
@@ -196,7 +228,7 @@
           Pixel Park was a 24-hour hackathon project. I developed a LiDAR-based parking detection
           system to find open spots faster and reduce search time.
         </p>
-        <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn gradient-btn">
+        <a href="https://github.com/yourusername/pixel_park_project" target="_blank" class="btn fancy-btn">
           View Code
         </a>
       </div>
@@ -210,8 +242,13 @@
       </div>
     </div>
 
+    <!-- Wave Divider -->
+    <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,120 C480,0 960,180 1440,60 L1440,240 L0,240 Z"></path>
+    </svg>
+
     <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
+    <section id="contact" data-aos="fade-up" class="section-wave">
       <div class="container">
         <h2>Contact Me</h2>
         <p>
@@ -222,7 +259,7 @@
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn gradient-btn">Send Message</button>
+          <button type="submit" class="btn fancy-btn">Send Message</button>
         </form>
         <div class="contact-details">
           <p><strong>LinkedIn:</strong>
